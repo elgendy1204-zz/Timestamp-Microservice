@@ -2,11 +2,11 @@
 	"name": "fcc-learn-npm-package-json",
 	"dependencies": {
 		"express": "^4.14.0",
-    "dateformat": "3.0.2" 
+		"dateformat": "3.0.2"
 	},
 	"main": "server.js",
 	"scripts": {
-		"start": "node server.js"
+		"start": "PORT=3000 node server.js"
 	},
 	"engines": {
 		"node": "4.4.5"
