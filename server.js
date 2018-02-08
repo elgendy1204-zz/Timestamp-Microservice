@@ -52,8 +52,13 @@ app.route('/:time')
         return;
       }
       if(isNaN(time)) {
-        timeObj.unix = Date.parse(time);
-        timeObj.natural = time;
+        if (Date.parse(time)){
+          timeObj.unix = Date.parse(time);
+          timeObj.natural = time;
+        } else {
+          timeObj.unix = null;
+          timeObj.natural = null;
+        }
       } else {
         timeObj.unix = Number(time);
         timeObj.natural = dateFormat(timeObj.unix, "mmmm dd, yyyy");
